@@ -1,0 +1,6 @@
+source_name,total_trips,sla_breaches,total_delay,sla_breach_rate,revenue_at_risk
+Gurgaon_Bilaspur_HB (Haryana),1052,22709,9823786.0,21.586501901140686,2270900
+Bangalore_Nelmngla_H (Karnataka),768,9642,4103212.0,12.5546875,964200
+Bhiwandi_Mankoli_HB (Maharashtra),821,9011,3081680.0,10.975639464068209,901100
+Pune_Tathawde_H (Maharashtra),403,3892,804210.0,9.657568238213399,389200
+Hyderabad_Shamshbd_H (Telangana),329,3285,689715.0,9.984802431610943,328500
