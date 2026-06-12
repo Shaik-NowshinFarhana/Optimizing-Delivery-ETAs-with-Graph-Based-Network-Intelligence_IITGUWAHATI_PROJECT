@@ -185,7 +185,7 @@ The project includes an interactive Streamlit dashboard featuring:
 ├── requirements.txt
 └── README.md
 ```
-![Complete Project Flow](Optimizing Delivery ETAs with Graph Based Network Intelligence.png)
+![Complete Project Flow](Optimizing Delivery ETAs with Graph Based Network Intelligence .png)
 ---
 
 # 🚀 Running the Dashboard
