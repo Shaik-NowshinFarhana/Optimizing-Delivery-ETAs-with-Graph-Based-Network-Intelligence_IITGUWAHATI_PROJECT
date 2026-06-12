@@ -1,0 +1,73 @@
+
+NETWORK OPERATIONS STRATEGY MEMO
+
+Project Title:
+Optimizing Delivery ETAs with Graph-Based Network Intelligence
+
+1. Executive Summary
+
+The logistics network was modeled as a directed weighted graph where each facility acts as a node and each movement corridor acts as an edge. The edge weight was calculated using the median delay ratio between actual delivery time and OSRM-estimated delivery time.
+
+This graph-based approach helps identify bottleneck hubs, delayed corridors, and structurally risky parts of the logistics network. It also improves ETA prediction by adding graph-level intelligence to the machine learning model.
+
+2. Model Performance
+
+OSRM Current Estimate:
+MAE = 203.92
+15% Accuracy = 3.91%
+
+Baseline Machine Learning Model:
+MAE = 41.14
+15% Accuracy = 52.90%
+
+Graph-Enhanced Machine Learning Model:
+MAE = 37.18
+15% Accuracy = 59.88%
+
+3. Top 5 Bottleneck Hubs
+
+                              hub  bottleneck_score  total_delay_contribution  total_sla_breaches
+    Gurgaon_Bilaspur_HB (Haryana)          1.000000                14974788.0             37309.0
+ Bangalore_Nelmngla_H (Karnataka)          0.626125                 8522869.0             20376.0
+Bhiwandi_Mankoli_HB (Maharashtra)          0.365750                 4958237.0             14498.0
+ Hyderabad_Shamshbd_H (Telangana)          0.353604                 2034636.0              8267.0
+ Kolkata_Dankuni_HB (West Bengal)          0.346132                 3760902.0              7484.0
+
+4. Key Operational Findings
+
+- Hubs with high betweenness centrality act as chokepoints because many routes pass through them.
+- Corridors with delay ratio above 1.20 are chronic delay corridors.
+- Graph-based features improve ETA prediction because they capture network risk.
+- High-risk corridors should be reviewed for FTL movement instead of Carting.
+- Bottleneck hubs contribute disproportionately to SLA breaches and revenue-at-risk.
+
+5. Recommendations
+
+Recommendation 1:
+Upgrade processing capacity at the top 3 bottleneck hubs.
+
+Recommendation 2:
+Prioritize delayed corridors where actual time exceeds OSRM time by more than 20%.
+
+Recommendation 3:
+Use bottleneck score as a weekly operational monitoring metric.
+
+Recommendation 4:
+Shift high-risk long-distance corridors from Carting to FTL where delay risk is high.
+
+Recommendation 5:
+Use the graph-enhanced ETA model instead of relying only on OSRM estimates.
+
+6. Estimated Business Impact
+
+Assuming a 25% improvement in the top 3 bottleneck hubs:
+
+Estimated late deliveries reduced:
+10340
+
+Estimated revenue recovered:
+₹1034050.00
+
+7. Conclusion
+
+The graph-based intelligence system provides better visibility into delivery delays than OSRM alone. It identifies bottleneck hubs, highlights delayed corridors, improves ETA prediction, and supports data-backed FTL versus Carting decisions.
