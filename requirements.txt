@@ -1,0 +1,10 @@
+streamlit 
+pandas
+numpy 
+networkx
+scikit-learn
+xgboost
+matplotlib
+seaborn
+pyvis 
+streamlit-option-menu
